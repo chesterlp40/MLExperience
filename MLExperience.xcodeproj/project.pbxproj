@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF24C37C248D8EB3002BB425 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C37B248D8EB3002BB425 /* AmountViewController.swift */; };
+		EF24C37E248D9418002BB425 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C37D248D9418002BB425 /* BaseViewController.swift */; };
+		EF24C380248DA1FF002BB425 /* PayMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C37F248DA1FF002BB425 /* PayMethodViewController.swift */; };
+		EF24C382248DBE1A002BB425 /* CreditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C381248DBE1A002BB425 /* CreditCards.swift */; };
+		EF24C384248DBE3A002BB425 /* Banks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C383248DBE3A002BB425 /* Banks.swift */; };
+		EF24C386248DD57A002BB425 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C385248DD57A002BB425 /* LocalizedStrings.swift */; };
+		EF24C388248DDBEF002BB425 /* BankSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C387248DDBEF002BB425 /* BankSelectorViewController.swift */; };
+		EF24C38A248DFA7D002BB425 /* DuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C389248DFA7D002BB425 /* DuesViewController.swift */; };
+		EF24C38C248DFEC0002BB425 /* PayerCosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C38B248DFEC0002BB425 /* PayerCosts.swift */; };
 		EF565DFD248D48DE004D1DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565DFC248D48DE004D1DC9 /* AppDelegate.swift */; };
 		EF565DFF248D48DE004D1DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565DFE248D48DE004D1DC9 /* SceneDelegate.swift */; };
-		EF565E01248D48DE004D1DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565E00248D48DE004D1DC9 /* ViewController.swift */; };
 		EF565E04248D48DE004D1DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF565E02248D48DE004D1DC9 /* Main.storyboard */; };
 		EF565E06248D48E0004D1DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF565E05248D48E0004D1DC9 /* Assets.xcassets */; };
 		EF565E09248D48E0004D1DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF565E07248D48E0004D1DC9 /* LaunchScreen.storyboard */; };
+		EF565E14248D60FD004D1DC9 /* RestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565E13248D60FD004D1DC9 /* RestAPIClient.swift */; };
+		EF565E1C248D8714004D1DC9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565E1B248D8714004D1DC9 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF24C37B248D8EB3002BB425 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
+		EF24C37D248D9418002BB425 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF24C37F248DA1FF002BB425 /* PayMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodViewController.swift; sourceTree = "<group>"; };
+		EF24C381248DBE1A002BB425 /* CreditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCards.swift; sourceTree = "<group>"; };
+		EF24C383248DBE3A002BB425 /* Banks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banks.swift; sourceTree = "<group>"; };
+		EF24C385248DD57A002BB425 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		EF24C387248DDBEF002BB425 /* BankSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectorViewController.swift; sourceTree = "<group>"; };
+		EF24C389248DFA7D002BB425 /* DuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesViewController.swift; sourceTree = "<group>"; };
+		EF24C38B248DFEC0002BB425 /* PayerCosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerCosts.swift; sourceTree = "<group>"; };
 		EF565DF9248D48DE004D1DC9 /* MLExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF565DFC248D48DE004D1DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF565DFE248D48DE004D1DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF565E00248D48DE004D1DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF565E03248D48DE004D1DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF565E05248D48E0004D1DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF565E08248D48E0004D1DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF565E0A248D48E0004D1DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF565E13248D60FD004D1DC9 /* RestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIClient.swift; sourceTree = "<group>"; };
+		EF565E1B248D8714004D1DC9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +78,47 @@
 			children = (
 				EF565DFC248D48DE004D1DC9 /* AppDelegate.swift */,
 				EF565DFE248D48DE004D1DC9 /* SceneDelegate.swift */,
-				EF565E00248D48DE004D1DC9 /* ViewController.swift */,
-				EF565E02248D48DE004D1DC9 /* Main.storyboard */,
+				EF565E12248D60CB004D1DC9 /* Models */,
+				EF565E11248D60B7004D1DC9 /* Views */,
+				EF565E10248D60A0004D1DC9 /* Controllers */,
 				EF565E05248D48E0004D1DC9 /* Assets.xcassets */,
 				EF565E07248D48E0004D1DC9 /* LaunchScreen.storyboard */,
 				EF565E0A248D48E0004D1DC9 /* Info.plist */,
 			);
 			path = MLExperience;
+			sourceTree = "<group>";
+		};
+		EF565E10248D60A0004D1DC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF565E1B248D8714004D1DC9 /* StartViewController.swift */,
+				EF24C389248DFA7D002BB425 /* DuesViewController.swift */,
+				EF24C387248DDBEF002BB425 /* BankSelectorViewController.swift */,
+				EF24C37F248DA1FF002BB425 /* PayMethodViewController.swift */,
+				EF24C37D248D9418002BB425 /* BaseViewController.swift */,
+				EF24C37B248D8EB3002BB425 /* AmountViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EF565E11248D60B7004D1DC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF565E02248D48DE004D1DC9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF565E12248D60CB004D1DC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF565E13248D60FD004D1DC9 /* RestAPIClient.swift */,
+				EF24C383248DBE3A002BB425 /* Banks.swift */,
+				EF24C38B248DFEC0002BB425 /* PayerCosts.swift */,
+				EF24C381248DBE1A002BB425 /* CreditCards.swift */,
+				EF24C385248DD57A002BB425 /* LocalizedStrings.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF565E01248D48DE004D1DC9 /* ViewController.swift in Sources */,
+				EF565E14248D60FD004D1DC9 /* RestAPIClient.swift in Sources */,
 				EF565DFD248D48DE004D1DC9 /* AppDelegate.swift in Sources */,
+				EF24C380248DA1FF002BB425 /* PayMethodViewController.swift in Sources */,
+				EF24C37C248D8EB3002BB425 /* AmountViewController.swift in Sources */,
+				EF24C386248DD57A002BB425 /* LocalizedStrings.swift in Sources */,
 				EF565DFF248D48DE004D1DC9 /* SceneDelegate.swift in Sources */,
+				EF24C38C248DFEC0002BB425 /* PayerCosts.swift in Sources */,
+				EF24C37E248D9418002BB425 /* BaseViewController.swift in Sources */,
+				EF24C38A248DFA7D002BB425 /* DuesViewController.swift in Sources */,
+				EF24C384248DBE3A002BB425 /* Banks.swift in Sources */,
+				EF24C382248DBE1A002BB425 /* CreditCards.swift in Sources */,
+				EF565E1C248D8714004D1DC9 /* StartViewController.swift in Sources */,
+				EF24C388248DDBEF002BB425 /* BankSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +357,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EzequielRasgido.MLExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -311,7 +375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EzequielRasgido.MLExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
