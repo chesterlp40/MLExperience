@@ -23,6 +23,7 @@
 		EF565E09248D48E0004D1DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF565E07248D48E0004D1DC9 /* LaunchScreen.storyboard */; };
 		EF565E14248D60FD004D1DC9 /* RestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565E13248D60FD004D1DC9 /* RestAPIClient.swift */; };
 		EF565E1C248D8714004D1DC9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF565E1B248D8714004D1DC9 /* StartViewController.swift */; };
+		EFCACE8F24981BEE00655A92 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCACE8E24981BEE00655A92 /* CongratsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EF565E0A248D48E0004D1DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF565E13248D60FD004D1DC9 /* RestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIClient.swift; sourceTree = "<group>"; };
 		EF565E1B248D8714004D1DC9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		EFCACE8E24981BEE00655A92 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				EF24C37F248DA1FF002BB425 /* PayMethodViewController.swift */,
 				EF24C37D248D9418002BB425 /* BaseViewController.swift */,
 				EF24C37B248D8EB3002BB425 /* AmountViewController.swift */,
+				EFCACE8E24981BEE00655A92 /* CongratsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				EF24C382248DBE1A002BB425 /* CreditCards.swift in Sources */,
 				EF565E1C248D8714004D1DC9 /* StartViewController.swift in Sources */,
 				EF24C388248DDBEF002BB425 /* BankSelectorViewController.swift in Sources */,
+				EFCACE8F24981BEE00655A92 /* CongratsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

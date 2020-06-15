@@ -105,7 +105,7 @@ struct RestAPIClient {
     //MARK: - Dues Section
     
     func fetchDues(amount: String, payMethodId: String, bankId: String) {
-        let urlDues = "\(baseUrl)/installments?public_key=\(publicKey)&amount=12400.50&payment_method_id=\(payMethodId)&issuer.id=\(bankId)"
+        let urlDues = "\(baseUrl)/installments?public_key=\(publicKey)&amount=\(amount)&payment_method_id=\(payMethodId)&issuer.id=\(bankId)"
         performDuesRequest(url: urlDues)
     }
     

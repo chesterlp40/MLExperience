@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73N-7P-2Uc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73N-7P-2Uc">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -147,23 +147,23 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
             <objects>
                 <viewController id="UfF-WB-ugp" customClass="PayMethodViewController" customModule="MLExperience" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vPE-0V-3X8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercado Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6J-JL-ILy">
-                                <rect key="frame" x="16" y="30" width="288" height="30.5"/>
+                                <rect key="frame" x="16" y="74" width="288" height="30.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione medio de pago:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-sW-SNe">
-                                <rect key="frame" x="16" y="145.5" width="288" height="21"/>
+                                <rect key="frame" x="16" y="189.5" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="16"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione la tarjeta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-De-moD">
-                                <rect key="frame" x="16" y="249" width="288" height="50"/>
+                                <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qWe-Qg-CtK"/>
                                 </constraints>
@@ -171,7 +171,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkS-Sf-LuT">
-                                <rect key="frame" x="16" y="463" width="288" height="45"/>
+                                <rect key="frame" x="16" y="483" width="288" height="45"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Gan-7w-AIE"/>
@@ -187,7 +187,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dmP-3H-hzk">
-                                <rect key="frame" x="145" y="259" width="30" height="30"/>
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Xpv-MI-lQl"/>
                                     <constraint firstAttribute="height" constant="30" id="qOe-DA-i8D"/>
@@ -231,23 +231,23 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
             <objects>
                 <viewController id="68Z-YH-4zo" customClass="BankSelectorViewController" customModule="MLExperience" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xoM-KE-eb5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercado Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb2-eV-clI">
-                                <rect key="frame" x="16" y="30" width="288" height="30.5"/>
+                                <rect key="frame" x="16" y="74" width="288" height="30.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione un banco:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snY-AJ-EZt">
-                                <rect key="frame" x="16" y="145.5" width="288" height="21"/>
+                                <rect key="frame" x="16" y="189.5" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="16"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el banco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUz-Aj-xag">
-                                <rect key="frame" x="16" y="249" width="288" height="50"/>
+                                <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ywu-RG-IMx"/>
                                 </constraints>
@@ -255,7 +255,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjn-p8-mnn">
-                                <rect key="frame" x="16" y="463" width="288" height="45"/>
+                                <rect key="frame" x="16" y="483" width="288" height="45"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="W0e-Xs-svo"/>
@@ -272,7 +272,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="phn-PC-ryu">
-                                <rect key="frame" x="145" y="259" width="30" height="30"/>
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7ZC-et-rjM"/>
                                     <constraint firstAttribute="width" constant="30" id="iRD-mn-ZCM"/>
@@ -304,7 +304,6 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                         <outlet property="activityIndicator" destination="phn-PC-ryu" id="ipC-zf-8B5"/>
                         <outlet property="bankTextField" destination="kUz-Aj-xag" id="cEj-yF-VrM"/>
                         <outlet property="siguienteButton" destination="Xjn-p8-mnn" id="YAI-Ss-KbW"/>
-                        <segue destination="UfF-WB-ugp" kind="show" identifier="unwindSegue" id="TZS-Jj-i5J"/>
                         <segue destination="Wbq-CZ-eID" kind="show" identifier="fromBankToDues" id="tAk-6B-i7W"/>
                     </connections>
                 </viewController>
@@ -317,23 +316,23 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
             <objects>
                 <viewController id="Wbq-CZ-eID" customClass="DuesViewController" customModule="MLExperience" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXj-7D-HOI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercado Pago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL4-vL-Lby">
-                                <rect key="frame" x="16" y="30" width="288" height="30.5"/>
+                                <rect key="frame" x="16" y="74" width="288" height="30.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione la cantidad de cuotas:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-nb-JzB">
-                                <rect key="frame" x="16" y="145.5" width="288" height="21"/>
+                                <rect key="frame" x="16" y="189.5" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="16"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione la cantidad de cuotas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-yM-yzz">
-                                <rect key="frame" x="16" y="249" width="288" height="50"/>
+                                <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aUQ-Fp-xeS"/>
                                 </constraints>
@@ -341,7 +340,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKM-2b-0g0">
-                                <rect key="frame" x="16" y="463" width="288" height="45"/>
+                                <rect key="frame" x="16" y="483" width="288" height="45"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="DCO-9d-opE"/>
@@ -359,7 +358,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DNZ-RK-ayV">
-                                <rect key="frame" x="145" y="259" width="30" height="30"/>
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="rAp-jZ-OvF"/>
                                     <constraint firstAttribute="height" constant="30" id="vde-1D-8q2"/>
@@ -391,11 +390,75 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                         <outlet property="activityIndicator" destination="DNZ-RK-ayV" id="1ZM-cj-Lxb"/>
                         <outlet property="duesTextField" destination="0s8-yM-yzz" id="ImE-C8-wN1"/>
                         <outlet property="siguienteButton" destination="EKM-2b-0g0" id="j1R-ko-tnF"/>
+                        <segue destination="BjC-bf-nxV" kind="show" identifier="fromDuesToCongrats" id="YKG-84-ulv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PD5-QA-x4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4545" y="117"/>
+        </scene>
+        <!--Congrats View Controller-->
+        <scene sceneID="m3d-4a-ndj">
+            <objects>
+                <viewController id="BjC-bf-nxV" customClass="CongratsViewController" customModule="MLExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SEp-jb-kxN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu9-nc-Qgc">
+                                <rect key="frame" x="16" y="483" width="288" height="45"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7BK-yY-DaB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <state key="normal" title="Finalizar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="comenzarButtonPressed:" destination="Ing-MY-5i2" eventType="touchUpInside" id="lbX-bc-oXJ"/>
+                                    <action selector="finalizarButtonPressed:" destination="BjC-bf-nxV" eventType="touchUpInside" id="kzb-D3-xPW"/>
+                                    <action selector="siguienteButtonPressed:" destination="UfF-WB-ugp" eventType="touchUpInside" id="GhM-gl-t0y"/>
+                                    <action selector="siguienteButtonPressed:" destination="Wbq-CZ-eID" eventType="touchUpInside" id="HL8-Nh-hsG"/>
+                                    <action selector="siguienteButtonPressed:" destination="mlq-0N-YC2" eventType="touchUpInside" id="OG3-qN-nFU"/>
+                                    <action selector="siguienteButtonPressed:" destination="68Z-YH-4zo" eventType="touchUpInside" id="Tsj-xY-buA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-ET-6cw">
+                                <rect key="frame" x="40" y="180" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zwd-r7-JVI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listo, has pagado satisfactoriamente!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUW-ha-1Gq">
+                                <rect key="frame" x="16" y="340" width="288" height="22.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MC1-ET-6cw" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="40" id="69B-hW-MmD"/>
+                            <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="Tu9-nc-Qgc" secondAttribute="trailing" constant="16" id="B1Y-B4-Ctf"/>
+                            <constraint firstItem="oUW-ha-1Gq" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="16" id="JOJ-of-eyj"/>
+                            <constraint firstItem="oUW-ha-1Gq" firstAttribute="top" secondItem="MC1-ET-6cw" secondAttribute="bottom" constant="60" id="MGc-on-aaC"/>
+                            <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="oUW-ha-1Gq" secondAttribute="trailing" constant="16" id="SFP-n6-Q9F"/>
+                            <constraint firstItem="Tu9-nc-Qgc" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="16" id="ZXt-lc-C5V"/>
+                            <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="MC1-ET-6cw" secondAttribute="trailing" constant="40" id="sBO-qt-tki"/>
+                            <constraint firstItem="ZBB-a7-5k3" firstAttribute="bottom" secondItem="Tu9-nc-Qgc" secondAttribute="bottom" constant="40" id="xTr-Vh-x8p"/>
+                            <constraint firstItem="MC1-ET-6cw" firstAttribute="top" secondItem="ZBB-a7-5k3" secondAttribute="top" constant="136" id="xnl-GU-paz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZBB-a7-5k3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jrB-qE-2pI"/>
+                    <connections>
+                        <outlet property="finalizarButton" destination="Tu9-nc-Qgc" id="lIY-at-iqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IeR-0E-YjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5409" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pfp-I0-ZSp">
@@ -416,7 +479,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
             <point key="canvasLocation" x="172.5" y="115.14084507042254"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="TZS-Jj-i5J"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Image" width="62" height="62"/>
+    </resources>
 </document>

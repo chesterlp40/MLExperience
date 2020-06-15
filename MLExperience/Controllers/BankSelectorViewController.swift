@@ -33,13 +33,15 @@ class BankSelectorViewController: BaseViewController {
         bankTextField.delegate = self
         DispatchQueue.main.async {
             self.restAPIClient.fetchBanks(payMethodId: self.payMethodId)
-            /*if self.banks.count == 0 {
-                let alert = UIAlertController(title: LocalizedStrings.sorry, message: LocalizedStrings.noBanks, preferredStyle: .alert)
-                let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: { (action) -> Void in
-                    self.navigationController?.popViewController(animated: true)})
-                alert.addAction(aceptar)
-                self.present(alert, animated: true, completion: nil)
-            }*/
+            if self.activityIndicator.isHidden {
+                if self.banks.count == 0 {
+                    let alert = UIAlertController(title: LocalizedStrings.sorry, message: LocalizedStrings.noBanks, preferredStyle: .alert)
+                    let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: { (action) -> Void in
+                        self.navigationController?.popViewController(animated: true)})
+                    alert.addAction(aceptar)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
         }
         bankTextField.inputView = banksPickerView
         bankTextField.addTarget(self, action: #selector(setBankDefault), for: UIControl.Event.touchDown)
@@ -76,7 +78,7 @@ class BankSelectorViewController: BaseViewController {
         if bankTextField.text != LocalizedStrings.emptyString {
             performSegue(withIdentifier: LocalizedStrings.fourthSegue, sender: self)
         } else {
-            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutDues, preferredStyle: .alert)
+            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutBank, preferredStyle: .alert)
             let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
             alert.addAction(aceptar)
             self.present(alert, animated: true, completion: nil)

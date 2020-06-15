@@ -13,8 +13,6 @@ class AmountViewController: BaseViewController {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var siguienteButton: UIButton!
     
-    var amount = LocalizedStrings.emptyString
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         siguienteButton.layer.cornerRadius = 20
@@ -26,7 +24,9 @@ class AmountViewController: BaseViewController {
         if amountTextField.text != LocalizedStrings.emptyString {
             if segue.identifier == LocalizedStrings.secondSegue {
                 let destinationVC = segue.destination as! PayMethodViewController
-                destinationVC.amount = amountTextField.text!
+                let string$ = amountTextField.text!.dropFirst()
+                let newAmount = string$.replacingOccurrences(of: ",", with: "")
+                destinationVC.amount = newAmount
             }
         }
     }

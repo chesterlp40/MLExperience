@@ -14,7 +14,7 @@ struct LocalizedStrings {
     static let secondSegue = "fromAmountToPayMethod"
     static let thirdSegue = "fromPayMethodToBank"
     static let fourthSegue = "fromBankToDues"
-    static let unwindSegue = "unwindSegue"
+    static let fifthSegue = "fromDuesToCongrats"
     
     static let emptyString = ""
     static let ok = "OK"
@@ -24,5 +24,6 @@ struct LocalizedStrings {
     static let withoutDues = "No seleccionaste las cuotas"
     static let sorry = "¡Lo sentimos!"
     static let noBanks = "No hay bancos para el medio de pago seleccionado"
+    static let withoutBank = "No seleccionaste las cuotas"
     
 }

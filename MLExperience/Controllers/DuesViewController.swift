@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DuesViewController: UIViewController {
+class DuesViewController: BaseViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var duesTextField: UITextField!
@@ -49,7 +49,14 @@ class DuesViewController: UIViewController {
     }
     
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
-        
+        if duesTextField.text != LocalizedStrings.emptyString {
+            performSegue(withIdentifier: LocalizedStrings.fifthSegue, sender: self)
+        } else {
+            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutDues, preferredStyle: .alert)
+            let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
+            alert.addAction(aceptar)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }
