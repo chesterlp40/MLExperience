@@ -9,6 +9,9 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
+    let baseButtonHeight = 40
+    let screenHeightConstant = 700
 
     override func viewDidLoad() {
         super.viewDidLoad()

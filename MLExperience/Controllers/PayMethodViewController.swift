@@ -13,6 +13,7 @@ class PayMethodViewController: BaseViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var payMethodTextField: UITextField!
     @IBOutlet weak var siguienteButton: UIButton!
+    @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     
     let creditCardsPickerView = UIPickerView()
     var amount = LocalizedStrings.emptyString
@@ -79,7 +80,18 @@ class PayMethodViewController: BaseViewController {
 extension PayMethodViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        creditCardsPickerView.reloadAllComponents()
+        //creditCardsPickerView.reloadAllComponents()
+        let screenHeight = UIScreen.main.bounds.height
+        if screenHeight > CGFloat(screenHeightConstant) {
+            buttonConstraint.constant = 200
+        } else {
+            buttonConstraint.constant = 230
+        }
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        buttonConstraint.constant = CGFloat(baseButtonHeight)
         return true
     }
     

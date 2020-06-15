@@ -134,6 +134,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                     <navigationItem key="navigationItem" id="VQT-Jf-2G5"/>
                     <connections>
                         <outlet property="amountTextField" destination="Ccf-br-YQa" id="v6P-VJ-PL6"/>
+                        <outlet property="buttonConstraint" destination="9g3-wA-63r" id="18S-mc-xa9"/>
                         <outlet property="siguienteButton" destination="7rd-wT-QsH" id="2WG-md-fLs"/>
                         <segue destination="UfF-WB-ugp" kind="show" identifier="fromAmountToPayMethod" id="kNg-ib-VLA"/>
                     </connections>
@@ -217,6 +218,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                     <navigationItem key="navigationItem" id="Jcl-BZ-bYh"/>
                     <connections>
                         <outlet property="activityIndicator" destination="dmP-3H-hzk" id="Hgt-3L-0r9"/>
+                        <outlet property="buttonConstraint" destination="aro-Ug-Gu4" id="weK-u2-SBm"/>
                         <outlet property="payMethodTextField" destination="RXC-De-moD" id="GSh-4p-l1V"/>
                         <outlet property="siguienteButton" destination="bkS-Sf-LuT" id="vmx-Sn-2bx"/>
                         <segue destination="68Z-YH-4zo" kind="show" identifier="fromPayMethodToBank" id="eW8-MP-sfi"/>
@@ -303,6 +305,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                     <connections>
                         <outlet property="activityIndicator" destination="phn-PC-ryu" id="ipC-zf-8B5"/>
                         <outlet property="bankTextField" destination="kUz-Aj-xag" id="cEj-yF-VrM"/>
+                        <outlet property="buttonConstraint" destination="hsU-SS-EoE" id="DhP-qk-aNE"/>
                         <outlet property="siguienteButton" destination="Xjn-p8-mnn" id="YAI-Ss-KbW"/>
                         <segue destination="Wbq-CZ-eID" kind="show" identifier="fromBankToDues" id="tAk-6B-i7W"/>
                     </connections>
@@ -388,6 +391,7 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                     <navigationItem key="navigationItem" id="9eE-sl-doe"/>
                     <connections>
                         <outlet property="activityIndicator" destination="DNZ-RK-ayV" id="1ZM-cj-Lxb"/>
+                        <outlet property="buttonConstraint" destination="3hn-ah-jSq" id="fDY-Uf-nXt"/>
                         <outlet property="duesTextField" destination="0s8-yM-yzz" id="ImE-C8-wN1"/>
                         <outlet property="siguienteButton" destination="EKM-2b-0g0" id="j1R-ko-tnF"/>
                         <segue destination="BjC-bf-nxV" kind="show" identifier="fromDuesToCongrats" id="YKG-84-ulv"/>

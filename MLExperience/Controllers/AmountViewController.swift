@@ -12,6 +12,7 @@ class AmountViewController: BaseViewController {
     
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var siguienteButton: UIButton!
+    @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,22 @@ extension AmountViewController: UITextFieldDelegate {
         } else {
             return true
         }
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let screenHeight = UIScreen.main.bounds.height
+        if screenHeight > CGFloat(screenHeightConstant) {
+            buttonConstraint.constant = 290
+        } else {
+            buttonConstraint.constant = 230
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        buttonConstraint.constant = CGFloat(baseButtonHeight)
+        return true
     }
     
 }
