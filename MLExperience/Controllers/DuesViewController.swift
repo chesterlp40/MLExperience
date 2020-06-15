@@ -29,16 +29,20 @@ class DuesViewController: BaseViewController {
         activityIndicator.style = .large
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        siguienteButton.layer.cornerRadius = 20
+        siguienteButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
         restAPIClient.delegateDues = self
         duesPickerView.delegate = self
         duesPickerView.dataSource = self
         duesTextField.delegate = self
         DispatchQueue.main.async {
-            self.restAPIClient.fetchDues(amount: self.amount, payMethodId: self.payMethodId, bankId: self.bankId)
+            self.restAPIClient.fetchDues(amount: self.amount,
+                                         payMethodId: self.payMethodId,
+                                         bankId: self.bankId)
         }
         duesTextField.inputView = duesPickerView
-        duesTextField.addTarget(self, action: #selector(setDuesDefault), for: UIControl.Event.touchDown)
+        duesTextField.addTarget(self,
+                                action: #selector(setDuesDefault),
+                                for: UIControl.Event.touchDown)
     }
     
     @objc func setDuesDefault() {
@@ -51,12 +55,19 @@ class DuesViewController: BaseViewController {
     
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
         if duesTextField.text != LocalizedStrings.emptyString {
-            performSegue(withIdentifier: LocalizedStrings.fifthSegue, sender: self)
+            performSegue(withIdentifier: LocalizedStrings.fifthSegue,
+                         sender: self)
         } else {
-            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutDues, preferredStyle: .alert)
-            let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
+            let alert = UIAlertController(title: LocalizedStrings.ups,
+                                          message: LocalizedStrings.withoutDues,
+                                          preferredStyle: .alert)
+            let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                        style: .default,
+                                        handler: nil)
             alert.addAction(aceptar)
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert,
+                         animated: true,
+                         completion: nil)
         }
     }
     
@@ -97,15 +108,20 @@ extension DuesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
         return messages.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
         return messages[row].payer_costs[row].recommended_message
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
         duesTextField.text = messages[row].payer_costs[row].recommended_message
     }
     
@@ -115,7 +131,8 @@ extension DuesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
 extension DuesViewController: RestAPIClientDuesDelegate {
     
-    func didSetDues(_ restAPIClient: RestAPIClient, messages: [PayerCosts]) {
+    func didSetDues(_ restAPIClient: RestAPIClient,
+                    messages: [PayerCosts]) {
         DispatchQueue.main.async {
             self.messages = messages
             self.activityIndicator.stopAnimating()

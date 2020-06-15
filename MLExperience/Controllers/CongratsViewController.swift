@@ -15,7 +15,7 @@ class CongratsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        finalizarButton.layer.cornerRadius = 20
+        finalizarButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
     }
 
     @IBAction func finalizarButtonPressed(_ sender: UIButton) {

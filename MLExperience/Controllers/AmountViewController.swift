@@ -16,17 +16,21 @@ class AmountViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        siguienteButton.layer.cornerRadius = 20
+        siguienteButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
         amountTextField.delegate = self
-        amountTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        amountTextField.addTarget(self,
+                                  action: #selector(textFieldDidChange),
+                                  for: .editingChanged)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
         if amountTextField.text != LocalizedStrings.emptyString {
             if segue.identifier == LocalizedStrings.secondSegue {
                 let destinationVC = segue.destination as! PayMethodViewController
                 let string$ = amountTextField.text!.dropFirst()
-                let newAmount = string$.replacingOccurrences(of: ",", with: "")
+                let newAmount = string$.replacingOccurrences(of: ",",
+                                                             with: "")
                 destinationVC.amount = newAmount
             }
         }
@@ -34,12 +38,19 @@ class AmountViewController: BaseViewController {
     
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
         if amountTextField.text != LocalizedStrings.emptyString {
-            performSegue(withIdentifier: LocalizedStrings.secondSegue, sender: self)
+            performSegue(withIdentifier: LocalizedStrings.secondSegue,
+                         sender: self)
         } else {
-            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutAmount, preferredStyle: .alert)
-            let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
+            let alert = UIAlertController(title: LocalizedStrings.ups,
+                                          message: LocalizedStrings.withoutAmount,
+                                          preferredStyle: .alert)
+            let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                        style: .default,
+                                        handler: nil)
             alert.addAction(aceptar)
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert,
+                         animated: true,
+                         completion: nil)
         }
         
     }
@@ -71,7 +82,6 @@ extension AmountViewController: UITextFieldDelegate {
         } else {
             buttonConstraint.constant = 230
         }
-        
         return true
     }
     

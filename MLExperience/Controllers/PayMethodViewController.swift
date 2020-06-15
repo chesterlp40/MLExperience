@@ -25,7 +25,7 @@ class PayMethodViewController: BaseViewController {
         activityIndicator.style = .large
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        siguienteButton.layer.cornerRadius = 20
+        siguienteButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
         restAPIClient.delegateCreditCards = self
         creditCardsPickerView.delegate = self
         creditCardsPickerView.dataSource = self
@@ -34,7 +34,9 @@ class PayMethodViewController: BaseViewController {
             self.restAPIClient.fetchPayMethod()
         }
         payMethodTextField.inputView = creditCardsPickerView
-        payMethodTextField.addTarget(self, action: #selector(setCreditCardDefault), for: UIControl.Event.touchDown)
+        payMethodTextField.addTarget(self,
+                                     action: #selector(setCreditCardDefault),
+                                     for: UIControl.Event.touchDown)
     }
     
     @objc func setCreditCardDefault() {
@@ -45,7 +47,8 @@ class PayMethodViewController: BaseViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
         var payMethodId = LocalizedStrings.emptyString
         if payMethodTextField.text != LocalizedStrings.emptyString {
             if segue.identifier == LocalizedStrings.thirdSegue {
@@ -64,12 +67,19 @@ class PayMethodViewController: BaseViewController {
     
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
         if payMethodTextField.text != LocalizedStrings.emptyString {
-            performSegue(withIdentifier: LocalizedStrings.thirdSegue, sender: self)
+            performSegue(withIdentifier: LocalizedStrings.thirdSegue,
+                         sender: self)
         } else {
-            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutCard, preferredStyle: .alert)
-            let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
+            let alert = UIAlertController(title: LocalizedStrings.ups,
+                                          message: LocalizedStrings.withoutCard,
+                                          preferredStyle: .alert)
+            let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                        style: .default,
+                                        handler: nil)
             alert.addAction(aceptar)
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert,
+                         animated: true,
+                         completion: nil)
         }
     }
     
@@ -80,7 +90,7 @@ class PayMethodViewController: BaseViewController {
 extension PayMethodViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        //creditCardsPickerView.reloadAllComponents()
+        creditCardsPickerView.reloadAllComponents()
         let screenHeight = UIScreen.main.bounds.height
         if screenHeight > CGFloat(screenHeightConstant) {
             buttonConstraint.constant = 200
@@ -110,15 +120,20 @@ extension PayMethodViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
         return creditCards.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
         return creditCards[row].name
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
         payMethodTextField.text = creditCards[row].name
     }
     
@@ -128,7 +143,8 @@ extension PayMethodViewController: UIPickerViewDelegate, UIPickerViewDataSource 
 
 extension PayMethodViewController: RestAPIClientCreditCardsDelegate {
     
-    func didSetCreditCrads(_ restAPIClient: RestAPIClient, payMethod: [CreditCards]) {
+    func didSetCreditCrads(_ restAPIClient: RestAPIClient,
+                           payMethod: [CreditCards]) {
         DispatchQueue.main.async {
             self.creditCards = payMethod
             self.activityIndicator.stopAnimating()

@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
     
     let baseButtonHeight = 40
     let screenHeightConstant = 700
+    let cornerRadiusValue = 20
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +21,16 @@ class BaseViewController: UIViewController {
     }
     
     func setStyleNavBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(),
+                                                                    for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
     }
     
     func setGesture() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                 action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
@@ -53,8 +56,12 @@ extension String {
 
         var amountWithPrefix = self
 
-        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
-        amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count), withTemplate: "")
+        let regex = try! NSRegularExpression(pattern: "[^0-9]",
+                                             options: .caseInsensitive)
+        amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix,
+                                                          options: NSRegularExpression.MatchingOptions(rawValue: 0),
+                                                          range: NSMakeRange(0, self.count),
+                                                          withTemplate: "")
 
         let double = (amountWithPrefix as NSString).doubleValue
         number = NSNumber(value: (double / 100))
@@ -65,6 +72,5 @@ extension String {
 
         return formatter.string(from: number)!
     }
-    
-    
+
 }

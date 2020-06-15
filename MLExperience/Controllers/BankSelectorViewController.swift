@@ -27,7 +27,7 @@ class BankSelectorViewController: BaseViewController {
         activityIndicator.style = .large
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        siguienteButton.layer.cornerRadius = 20
+        siguienteButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
         restAPIClient.delegateBanks = self
         banksPickerView.delegate = self
         banksPickerView.dataSource = self
@@ -36,16 +36,24 @@ class BankSelectorViewController: BaseViewController {
             self.restAPIClient.fetchBanks(payMethodId: self.payMethodId)
             if self.activityIndicator.isHidden {
                 if self.banks.count == 0 {
-                    let alert = UIAlertController(title: LocalizedStrings.sorry, message: LocalizedStrings.noBanks, preferredStyle: .alert)
-                    let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: { (action) -> Void in
+                    let alert = UIAlertController(title: LocalizedStrings.sorry,
+                                                  message: LocalizedStrings.noBanks,
+                                                  preferredStyle: .alert)
+                    let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                                style: .default,
+                                                handler: { (action) -> Void in
                         self.navigationController?.popViewController(animated: true)})
                     alert.addAction(aceptar)
-                    self.present(alert, animated: true, completion: nil)
+                    self.present(alert,
+                                 animated: true,
+                                 completion: nil)
                 }
             }
         }
         bankTextField.inputView = banksPickerView
-        bankTextField.addTarget(self, action: #selector(setBankDefault), for: UIControl.Event.touchDown)
+        bankTextField.addTarget(self,
+                                action: #selector(setBankDefault),
+                                for: UIControl.Event.touchDown)
     }
     
     @objc func setBankDefault() {
@@ -56,7 +64,8 @@ class BankSelectorViewController: BaseViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
         var bankId = LocalizedStrings.emptyString
         if bankTextField.text != LocalizedStrings.emptyString {
             if segue.identifier == LocalizedStrings.fourthSegue {
@@ -77,12 +86,19 @@ class BankSelectorViewController: BaseViewController {
 
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
         if bankTextField.text != LocalizedStrings.emptyString {
-            performSegue(withIdentifier: LocalizedStrings.fourthSegue, sender: self)
+            performSegue(withIdentifier: LocalizedStrings.fourthSegue,
+                         sender: self)
         } else {
-            let alert = UIAlertController(title: LocalizedStrings.ups, message: LocalizedStrings.withoutBank, preferredStyle: .alert)
-            let aceptar = UIAlertAction(title: LocalizedStrings.ok, style: .default, handler: nil)
+            let alert = UIAlertController(title: LocalizedStrings.ups,
+                                          message: LocalizedStrings.withoutBank,
+                                          preferredStyle: .alert)
+            let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                        style: .default,
+                                        handler: nil)
             alert.addAction(aceptar)
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert,
+                         animated: true,
+                         completion: nil)
         }
     }
 }
@@ -121,15 +137,20 @@ extension BankSelectorViewController: UIPickerViewDelegate, UIPickerViewDataSour
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
         return banks.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
         return banks[row].name
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
         bankTextField.text = banks[row].name
     }
     
@@ -139,7 +160,8 @@ extension BankSelectorViewController: UIPickerViewDelegate, UIPickerViewDataSour
 
 extension BankSelectorViewController: RestAPIClientBanksDelegate {
     
-    func didSetBanks(_ restAPIClient: RestAPIClient, banks: [Banks]) {
+    func didSetBanks(_ restAPIClient: RestAPIClient,
+                     banks: [Banks]) {
         DispatchQueue.main.async {
             self.banks = banks
             self.activityIndicator.stopAnimating()

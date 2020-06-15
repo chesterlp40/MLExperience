@@ -14,11 +14,12 @@ class StartViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        comenzarButton.layer.cornerRadius = 20
+        comenzarButton.layer.cornerRadius = CGFloat(cornerRadiusValue)
     }
     
     @IBAction func comenzarButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: LocalizedStrings.firstSegue, sender: self)
+        performSegue(withIdentifier: LocalizedStrings.firstSegue,
+                     sender: self)
     }
     
 }
