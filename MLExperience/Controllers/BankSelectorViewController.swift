@@ -34,20 +34,18 @@ class BankSelectorViewController: BaseViewController {
         bankTextField.delegate = self
         DispatchQueue.main.async {
             self.restAPIClient.fetchBanks(payMethodId: self.payMethodId)
-            if self.activityIndicator.isHidden {
-                if self.banks.count == 0 {
-                    let alert = UIAlertController(title: LocalizedStrings.sorry,
-                                                  message: LocalizedStrings.noBanks,
-                                                  preferredStyle: .alert)
-                    let aceptar = UIAlertAction(title: LocalizedStrings.ok,
-                                                style: .default,
-                                                handler: { (action) -> Void in
-                        self.navigationController?.popViewController(animated: true)})
-                    alert.addAction(aceptar)
-                    self.present(alert,
-                                 animated: true,
-                                 completion: nil)
-                }
+            if self.banks.count == 0 {
+                let alert = UIAlertController(title: LocalizedStrings.sorry,
+                                              message: LocalizedStrings.noBanks,
+                                              preferredStyle: .alert)
+                let aceptar = UIAlertAction(title: LocalizedStrings.ok,
+                                            style: .default,
+                                            handler: { (action) -> Void in
+                    self.navigationController?.popViewController(animated: true)})
+                alert.addAction(aceptar)
+                self.present(alert,
+                             animated: true,
+                             completion: nil)
             }
         }
         bankTextField.inputView = banksPickerView
@@ -59,7 +57,9 @@ class BankSelectorViewController: BaseViewController {
     @objc func setBankDefault() {
         if bankTextField.text == LocalizedStrings.emptyString {
             DispatchQueue.main.async {
-                self.bankTextField.text = self.banks[0].name
+                if self.banks.count != 0 {
+                    self.bankTextField.text = self.banks[0].name
+                }
             }
         }
     }

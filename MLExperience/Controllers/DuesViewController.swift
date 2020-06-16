@@ -48,7 +48,9 @@ class DuesViewController: BaseViewController {
     @objc func setDuesDefault() {
         if duesTextField.text == LocalizedStrings.emptyString {
             DispatchQueue.main.async {
-                self.duesTextField.text = self.messages[0].payer_costs[0].recommended_message
+                if self.messages.count != 0 {
+                    self.duesTextField.text = self.messages[0].payer_costs[0].recommended_message
+                }
             }
         }
     }

@@ -42,7 +42,9 @@ class PayMethodViewController: BaseViewController {
     @objc func setCreditCardDefault() {
         if payMethodTextField.text == LocalizedStrings.emptyString {
             DispatchQueue.main.async {
-                self.payMethodTextField.text = self.creditCards[0].name
+                if self.creditCards.count != 0 {
+                    self.payMethodTextField.text = self.creditCards[0].name
+                }
             }
         }
     }
