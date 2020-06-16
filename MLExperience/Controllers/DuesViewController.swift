@@ -55,6 +55,19 @@ class DuesViewController: BaseViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        if duesTextField.text != LocalizedStrings.emptyString {
+            if segue.identifier == LocalizedStrings.fifthSegue {
+                let destinationVC = segue.destination as! CongratsViewController
+                destinationVC.amount = amount
+                destinationVC.payMethodName = payMethodName
+                destinationVC.bankName = bankName
+                destinationVC.dues = duesTextField.text!
+            }
+        }
+    }
+    
     @IBAction func siguienteButtonPressed(_ sender: UIButton) {
         if duesTextField.text != LocalizedStrings.emptyString {
             performSegue(withIdentifier: LocalizedStrings.fifthSegue,

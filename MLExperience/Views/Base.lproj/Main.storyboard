@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73N-7P-2Uc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73N-7P-2Uc">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -429,40 +429,54 @@ Desde aquí podrá gestionar sus pagos con tarjeta de credito.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-ET-6cw">
-                                <rect key="frame" x="40" y="180" width="240" height="100"/>
+                                <rect key="frame" x="40" y="94" width="240" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="zwd-r7-JVI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listo, has pagado satisfactoriamente!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUW-ha-1Gq">
-                                <rect key="frame" x="16" y="340" width="288" height="22.5"/>
+                                <rect key="frame" x="16" y="229" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMY-xY-hQm">
+                                <rect key="frame" x="16" y="291.5" width="288" height="74"/>
+                                <string key="text">Monto:
+Metodo de pago:
+Banco:
+Cuotas:</string>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MC1-ET-6cw" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="40" id="69B-hW-MmD"/>
+                            <constraint firstItem="vMY-xY-hQm" firstAttribute="top" secondItem="oUW-ha-1Gq" secondAttribute="bottom" constant="40" id="6BR-on-YDd"/>
                             <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="Tu9-nc-Qgc" secondAttribute="trailing" constant="16" id="B1Y-B4-Ctf"/>
+                            <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="vMY-xY-hQm" secondAttribute="trailing" constant="16" id="Bai-OB-Qjr"/>
                             <constraint firstItem="oUW-ha-1Gq" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="16" id="JOJ-of-eyj"/>
-                            <constraint firstItem="oUW-ha-1Gq" firstAttribute="top" secondItem="MC1-ET-6cw" secondAttribute="bottom" constant="60" id="MGc-on-aaC"/>
+                            <constraint firstItem="vMY-xY-hQm" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="16" id="L8u-ed-TIn"/>
                             <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="oUW-ha-1Gq" secondAttribute="trailing" constant="16" id="SFP-n6-Q9F"/>
                             <constraint firstItem="Tu9-nc-Qgc" firstAttribute="leading" secondItem="ZBB-a7-5k3" secondAttribute="leading" constant="16" id="ZXt-lc-C5V"/>
+                            <constraint firstItem="oUW-ha-1Gq" firstAttribute="top" secondItem="MC1-ET-6cw" secondAttribute="bottom" constant="35" id="kuc-DD-7t8"/>
                             <constraint firstItem="ZBB-a7-5k3" firstAttribute="trailing" secondItem="MC1-ET-6cw" secondAttribute="trailing" constant="40" id="sBO-qt-tki"/>
                             <constraint firstItem="ZBB-a7-5k3" firstAttribute="bottom" secondItem="Tu9-nc-Qgc" secondAttribute="bottom" constant="40" id="xTr-Vh-x8p"/>
-                            <constraint firstItem="MC1-ET-6cw" firstAttribute="top" secondItem="ZBB-a7-5k3" secondAttribute="top" constant="136" id="xnl-GU-paz"/>
+                            <constraint firstItem="MC1-ET-6cw" firstAttribute="top" secondItem="ZBB-a7-5k3" secondAttribute="top" constant="50" id="xnl-GU-paz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBB-a7-5k3"/>
                     </view>
                     <navigationItem key="navigationItem" id="jrB-qE-2pI"/>
                     <connections>
+                        <outlet property="descriptPay" destination="vMY-xY-hQm" id="VIV-nP-hRy"/>
                         <outlet property="finalizarButton" destination="Tu9-nc-Qgc" id="lIY-at-iqa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeR-0E-YjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5409" y="116"/>
+            <point key="canvasLocation" x="5407.5" y="115.14084507042254"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pfp-I0-ZSp">
